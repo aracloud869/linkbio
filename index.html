@@ -1,0 +1,226 @@
+<!DOCTYPE html>  
+<html lang="vi">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Link Bio | Danh Mod</title>  
+  
+<style>  
+:root{  
+  --main:#6a5af9;  
+}  
+*{  
+  margin:0;  
+  padding:0;  
+  box-sizing:border-box;  
+  font-family:'Segoe UI',sans-serif;  
+}  
+body{  
+  min-height:100vh;  
+  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);  
+  display:flex;  
+  justify-content:center;  
+  color:#fff;  
+}  
+.container{  
+  width:100%;  
+  max-width:430px;  
+}  
+.card{  
+  background:rgba(255,255,255,0.08);  
+  backdrop-filter:blur(22px);  
+  border-radius:24px;  
+  margin:20px;  
+  box-shadow:0 25px 50px rgba(0,0,0,.6);  
+  position:relative;  
+  overflow:visible;  
+}  
+  
+/* ===== COVER ===== */  
+.cover{  
+  height:240px;  
+  position:relative;  
+}  
+.cover img{  
+  width:100%;  
+  height:100%;  
+  object-fit:cover;  
+  border-top-left-radius:24px;  
+  border-top-right-radius:24px;  
+}  
+.cover::after{  
+  content:"";  
+  position:absolute;  
+  bottom:0;  
+  left:0;  
+  width:100%;  
+  height:90px;  
+  background:linear-gradient(to bottom,transparent,rgba(0,0,0,.6));  
+}  
+  
+/* ===== AVATAR ===== */  
+.avatar{  
+  width:130px;  
+  height:130px;  
+  border-radius:50%;  
+  border:4px solid #fff;  
+  object-fit:cover;  
+  position:absolute;  
+  top:175px;  
+  left:50%;  
+  transform:translateX(-50%);  
+  z-index:10;  
+  background:#000;  
+  box-shadow:  
+    0 0 15px rgba(255,0,255,.8),  
+    0 0 30px rgba(0,255,255,.6);  
+  animation:avatarPulse 4s infinite;  
+}  
+@keyframes avatarPulse{  
+  0%,100%{box-shadow:0 0 15px #ff00ff,0 0 30px #00ffff}  
+  50%{box-shadow:0 0 25px #00ff00,0 0 45px #ffff00}  
+}  
+  
+/* ===== CONTENT ===== */  
+.content{  
+  padding:95px 20px 25px;  
+  text-align:center;  
+}  
+h1{  
+  font-size:23px;  
+}  
+.role{  
+  font-size:14px;  
+  opacity:.8;  
+  margin-top:6px;  
+}  
+.about{  
+  background:rgba(255,255,255,0.08);  
+  border-radius:16px;  
+  padding:16px;  
+  margin:22px 0;  
+  font-size:14px;  
+  line-height:1.6;  
+}  
+  
+/* ===== LED RGB BUTTON ===== */  
+.led-btn{  
+  position:relative;  
+  padding:15px;  
+  border-radius:16px;  
+  margin-bottom:16px;  
+  font-weight:600;  
+  cursor:pointer;  
+  background:rgba(0,0,0,.35);  
+  color:#fff;  
+  overflow:hidden;  
+  z-index:1;  
+  transition:transform .2s, box-shadow .2s;  
+}  
+.led-btn::before{  
+  content:"";  
+  position:absolute;  
+  inset:-2px;  
+  background:conic-gradient(  
+    red, orange, yellow, lime,  
+    cyan, blue, violet, red  
+  );  
+  animation:rgb 2.5s linear infinite;  
+  z-index:-1;  
+  border-radius:18px;  
+}  
+.led-btn::after{  
+  content:"";  
+  position:absolute;  
+  inset:2px;  
+  background:rgba(20,20,40,.95);  
+  border-radius:14px;  
+  z-index:-1;  
+}  
+@keyframes rgb{  
+  0%{transform:rotate(0deg)}  
+  100%{transform:rotate(360deg)}  
+}  
+.led-btn:hover{  
+  transform:scale(1.05);  
+  box-shadow:0 0 25px rgba(255,255,255,.3);  
+}  
+.led-btn:active{  
+  box-shadow:0 0 40px #fff;  
+  transform:scale(1.1);  
+}  
+  
+/* ===== SUB LINKS ===== */  
+.sub-links{  
+  max-height:0;  
+  overflow:hidden;  
+  transition:.4s ease;  
+}  
+.sub-links a{  
+  display:block;  
+  margin:10px 0;  
+  padding:12px;  
+  background:rgba(255,255,255,.1);  
+  border-radius:12px;  
+  color:#fff;  
+  text-decoration:none;  
+  font-size:14px;  
+}  
+.sub-links.show{  
+  max-height:500px;  
+}  
+  
+footer{  
+  margin-top:18px;  
+  font-size:12px;  
+  opacity:.6;  
+}  
+</style>  
+</head>  
+  
+<body>  
+<div class="container">  
+  <div class="card">  
+  
+    <div class="cover">  
+      <img src="https://upload-os-bbs.hoyolab.com/upload/2021/08/12/64359086/f31dca6813c234ac7c7e0af2ab150c01_4091138182672114647.gif">  
+    </div>  
+  
+    <!-- AVATAR -->  
+    <img class="avatar" src="https://i.ibb.co/0yKY7YvM/0001-0.png">  
+  
+    <div class="content">  
+      <h1>Danh Mod</h1>  
+      <div class="role">HTML • Cloud • Share Code</div>  
+  
+      <div class="about">  
+        👋 Xin chào!<br>  
+        Tôi chia sẻ <b>HTML, Web App, Cloud Phone.</b><br>  
+        Theo dõi để không bỏ lỡ project xịn 🚀  
+      </div>  
+  
+      <!-- Nút có liên kết -->  
+      <div class="led-btn" onclick="window.open('https://www.facebook.com/nguyen.cong.danh.859563')">Facebook</div>  
+      <div class="led-btn" onclick="window.open('http://www.youtube.com/@DanhNguy%E1%BB%85n-w1y')">YouTube</div>  
+  
+      <div class="led-btn" onclick="toggleWeb()">🌐 Website của tôi</div>  
+      <div class="sub-links" id="webLinks">  
+        <a href="https://aracloud869.github.io/webmoi/">Web Ara Cloud &Hack</a>  
+        <a href="aracloud869.github.io/sever/">Web Sever Cloud Ara</a>  
+        <a href="#">Web Share Html</a>  
+      </div>  
+  
+      <footer>© 2026 • Link Bio</footer>  
+    </div>  
+  
+  </div>  
+</div>  
+  
+<script>  
+function toggleWeb(){  
+  document.getElementById("webLinks").classList.toggle("show");  
+}  
+</script>  
+  
+</body>  
+</html>
